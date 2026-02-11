@@ -1,0 +1,8 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+	<defs>
+		<image  width="486" height="486" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAeYAAAHmAQMAAACcXb+MAAAAAXNSR0IB2cksfwAAAAZQTFRFAAAA////pdmf3QAAAAJ0Uk5TAP9bkSK1AAACs0lEQVR4nO3dXW7aQBDA8d0EqXlrblDfoEcoJ2vhZuUGPUJ8g+StleomXlzcGZWNxjNgY+k/DwhZ/II9+0FsFk9OJfKfNC1e7wZ3fPzyfaJOvx5Gff97Kk5pvzvp6W+d0svjZfTrdDzkregPPx36eOBFf3z26LYZ9LedR5c2i2tP0oa0ZV9fKdGnLXuTltJhW/SnJ59um7j29NMSfdKzN+UpdZteT54ZTtE3WVR7m7s0eHaOsBKHbXY3WGmyZbW3s5SpLTtHd4luE9Xejlq6S1D7u1o/MQW1v6P2HX1R7Z1RS7SLav8QK9o/xPpBtqj2D9D+02TF2j85RHWHRqPRaDQajUbPoQ/b8ak8ZxguvR5DnfzVtfzP26a7TTr7sr34S+r1Sh+vsP7/sr+XnIeQ529aix2Xuy52XF8J1FruoXiTthGb5dn+O/pf0pWWl8S0zuK5SJtNq+wIrdIhk660yo44QLVLsiNcTY8HqA+oqlVnqWoxAK6nv+4CejxAOXbC+vOP87ptLFoMEzQajUaj0Wg0Go1Go9FoNBqNRqPRaDQajUaj0eiZdG21REUbV2rcvj5tNmrjypzraNuKJJOuroaqabV9sladTXRUm1brnOSqOJO2rX6rabUyTTSYUZtW/VV1LdBoNBqNRqPRaDQajUaj0Wg0Go2eSVd+Vbs6bbjv4s3o2q/H59D6a7SYNtxKT2n9NZr8OsmkK/camEVX7rFg1LLJLDcI1Vom3XL3Qq2nBhqNRqPRaDQajUaj0Wg0+rJ6zTUGYnq9NSVi2nDhsxrL1hCJ6SXrtixZ7SamgzWC/EM0Xt0opmNVnZasRxWrwxXTsQpiseplsbprQR2rGBerVuedF4c6e7EafzEdq07oHOGnyoi+tLXNJepJxnSsEmawCmesfqhH5/EhVvnUMb8M7g0OQC7sj4lykwAAAABJRU5ErkJggg=="/>
+	</defs>
+	<style>
+	</style>
+	<use id="trello" href="#img1" x="13" y="13"/>
+</svg>
