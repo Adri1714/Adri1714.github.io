@@ -16,7 +16,7 @@
         <div class="nav-container">
             <div class="logo">AR</div>
             <button class="mobile-menu-btn" id="mobile-menu-btn">☰</button>
-            <ul class="nav-links">
+            <ul class="nav-links" id="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#projects">Projects</a></li>
@@ -40,39 +40,39 @@
     </section>
 
     <section id="about" class="section">
-        <h2>About Me</h2>
-        <div class="section-divider"></div>
-        <div class="about-content">
-            <div class="about-text">
-                <p>I'm a passionate game developer currently studying Video Game Design and Development at CITM (UPC). My journey began when I was little, playing with simple programming like Scratch, and that awakened my programming passion.</p>
-                <p>I love bringing ideas to life through code, design, and storytelling. My approach combines technical expertise with creative vision to craft memorable player experiences.</p>
-                <p>When I'm not coding, you'll find me playing indie games for inspiration or participating in game jams. I believe games are the ultimate medium for storytelling and connection.</p>
+    <h2>About Me</h2>
+    <div class="section-divider"></div>
+    <div class="about-content">
+        <div class="about-text">
+            <p>I'm a passionate game developer currently studying Video Game Design and Development at CITM (UPC). My journey began when I was little, playing with simple programming like Scratch, and that awakened my programming passion.</p>
+            <p>I love bringing ideas to life through code, design, and storytelling. My approach combines technical expertise with creative vision to craft memorable player experiences.</p>
+            <p>When I'm not coding, you'll find me playing indie games for inspiration or participating in game jams. I believe games are the ultimate medium for storytelling and connection.</p>
+        </div>
+        <div class="about-highlights">
+            <div class="highlight-card">
+                <div class="highlight-title">
+                    <img src="Images/learn.svg" alt="Learn" class="highlight-icon">
+                    <span>Currently Studying</span>
+                </div>
+                <div class="highlight-desc">Video Game Design and Development at CITM (UPC), focusing on both technical and creative aspects of game development.</div>
             </div>
-            <div class="about-highlights">
-                <div class="highlight-card">
-                    <div class="highlight-title">
-                        <img src="Images/learn.svg" alt="Learn" style="width: 30px; height: 30px;">
-                        Currently Studying
-                    </div>
-                    <div class="highlight-desc">Video Game Design and Development at CITM (UPC), focusing on both technical and creative aspects of game development.</div>
+            <div class="highlight-card">
+                <div class="highlight-title">
+                    <img src="Images/games-control.svg" alt="Games" class="highlight-icon">
+                    <span>Game Jams</span>
                 </div>
-                <div class="highlight-card">
-                    <div class="highlight-title">
-                        <img src="Images/games-control.svg" alt="Games" style="width: 30px; height: 30px;">
-                        Game Jams
-                    </div>
-                    <div class="highlight-desc">Starting to participate in GameJams, pushing myself to create innovative experiences within given limits.</div>
+                <div class="highlight-desc">Starting to participate in GameJams, pushing myself to create innovative experiences within given limits.</div>
+            </div>
+            <div class="highlight-card">
+                <div class="highlight-title">
+                    <img src="Images/thinking.svg" alt="Solving" class="highlight-icon">
+                    <span>Problem Solver</span>
                 </div>
-                <div class="highlight-card">
-                    <div class="highlight-title">
-                        <img src="Images/thinking.svg" alt="Solving" style="width: 30px; height: 30px;">
-                        Problem Solver
-                    </div>
-                    <div class="highlight-desc">I enjoy breaking down problems step by step to find a solution.</div>
-                </div>
+                <div class="highlight-desc">I enjoy breaking down problems step by step to find a solution.</div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <section id="projects" class="section">
         <h2>Featured Projects</h2>
@@ -82,44 +82,28 @@
                 <div class="project-image"><img src="Images/ShockTroopers.png" alt="Shock Troopers"></div>
                 <div class="project-info">
                     <h3 class="project-title">Shock Troopers</h3>
-                    <p class="project-desc">A project I made the 1st uni year, along with four classmates, using only SDL.</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">C++</span>
-                        <span class="tech-tag">SDL</span>
-                    </div>
+                    <div class="project-tech"><span class="tech-tag">C++</span><span class="tech-tag">SDL</span></div>
                 </div>
             </div>
             <div class="project-card" onclick="openModal('project2')">
-                <div class="project-image"><img src="Images/W40K.png" alt="W40K-TLM"></div>
+                <div class="project-image"><img src="Images/W40K.png" alt="W40K"></div>
                 <div class="project-info">
                     <h3 class="project-title">W40K-TLM</h3>
-                    <p class="project-desc">Warhammer inspired game made with all my class collegues.</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">Lua</span>
-                        <span class="tech-tag">C</span>
-                    </div>
+                    <div class="project-tech"><span class="tech-tag">Lua</span><span class="tech-tag">C</span></div>
                 </div>
             </div>
             <div class="project-card" onclick="openModal('project3')">
-                <div class="project-image"><img src="Images/OdisseaCarta.png" alt="Odissea a la Carta"></div>
+                <div class="project-image"><img src="Images/OdisseaCarta.png" alt="Odissea"></div>
                 <div class="project-info">
                     <h3 class="project-title">Odissea a la Carta</h3>
-                    <p class="project-desc">Don't be a hero, sell odysseys to wannabe heroes!</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">Unity</span>
-                        <span class="tech-tag">GameJam</span>
-                    </div>
+                    <div class="project-tech"><span class="tech-tag">Unity</span><span class="tech-tag">C#</span></div>
                 </div>
             </div>
             <div class="project-card" onclick="openModal('project4')">
-                <div class="project-image"><img src="Images/AssylumOfCreation.png" alt="The Assylum of Creation"></div>
+                <div class="project-image"><img src="Images/AssylumOfCreation.png" alt="Asylum"></div>
                 <div class="project-info">
-                    <h3 class="project-title">The Assylum of Creation</h3>
-                    <p class="project-desc">7 days GameJam game</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">Unity</span>
-                        <span class="tech-tag">C#</span>
-                    </div>
+                    <h3 class="project-title">The Asylum of Creation</h3>
+                    <div class="project-tech"><span class="tech-tag">Unity</span><span class="tech-tag">C#</span></div>
                 </div>
             </div>
         </div>
@@ -130,40 +114,29 @@
         <div class="section-divider"></div>
         <div class="skills-grid">
             <div class="skill-category">
-                <h3><img src="Images/programming.svg" alt="Programming" style="width: 30px; height: 20px;"> Programming</h3>
+                <h3>Programming</h3>
                 <div class="skill-item">
                     <span class="skill-name">Unity</span>
-                    <div class="skill-bar"><div class="skill-progress" style="width: 95%;" data-percent="95%"></div></div>
+                    <div class="skill-bar"><div class="skill-progress" style="width: 95%" data-percent="95%"></div></div>
                 </div>
                 <div class="skill-item">
                     <span class="skill-name">C++</span>
-                    <div class="skill-bar"><div class="skill-progress" style="width: 70%;" data-percent="70%"></div></div>
+                    <div class="skill-bar"><div class="skill-progress" style="width: 70%" data-percent="70%"></div></div>
                 </div>
                 <div class="skill-item">
                     <span class="skill-name">C#</span>
-                    <div class="skill-bar"><div class="skill-progress" style="width: 80%;" data-percent="80%"></div></div>
+                    <div class="skill-bar"><div class="skill-progress" style="width: 80%" data-percent="80%"></div></div>
                 </div>
             </div>
             <div class="skill-category">
-                <h3><img src="Images/art.svg" alt="Art" style="width: 20px; height: 20px;"> Art</h3>
-                <div class="skill-item">
-                    <span class="skill-name">Maya</span>
-                    <div class="skill-bar"><div class="skill-progress" style="width: 75%;" data-percent="75%"></div></div>
-                </div>
-                <div class="skill-item">
-                    <span class="skill-name">Substance Painter</span>
-                    <div class="skill-bar"><div class="skill-progress" style="width: 70%;" data-percent="70%"></div></div>
-                </div>
-            </div>
-            <div class="skill-category">
-                <h3><img src="Images/organization.svg" alt="Production" style="width: 20px; height: 20px;"> Production</h3>
+                <h3>Production</h3>
                 <div class="skill-item">
                     <span class="skill-name">Git</span>
-                    <div class="skill-bar"><div class="skill-progress" style="width: 90%;" data-percent="90%"></div></div>
+                    <div class="skill-bar"><div class="skill-progress" style="width: 90%" data-percent="90%"></div></div>
                 </div>
                 <div class="skill-item">
                     <span class="skill-name">Agile/Scrum</span>
-                    <div class="skill-bar"><div class="skill-progress" style="width: 85%;" data-percent="85%"></div></div>
+                    <div class="skill-bar"><div class="skill-progress" style="width: 85%" data-percent="85%"></div></div>
                 </div>
             </div>
         </div>
@@ -177,53 +150,45 @@
             <div class="contact-links">
                 <div class="contact-row">
                     <a href="mailto:adria.roger.juanola@gmail.com" class="contact-link">
-                        <img src="Images/Gmail.svg" alt="Gmail" style="width: 30px; height: 30px;">
-                        <span class="link-text">Gmail</span>
+                        <img src="Images/Gmail.svg" alt="Gmail" style="width: 25px;"> <span>Gmail</span>
                     </a>
                     <a href="https://www.linkedin.com/in/adrià-roger-0b5899196/" class="contact-link" target="_blank">
-                        <img src="Images/linkedin.svg" alt="LinkedIn" style="width: 28px; height: 28px;">
-                        <span class="link-text">LinkedIn</span>
+                        <img src="Images/linkedin.svg" alt="LinkedIn" style="width: 25px;"> <span>LinkedIn</span>
                     </a>
                     <a href="https://github.com/Adri1714" class="contact-link" target="_blank">
-                        <img src="Images/github.svg" alt="GitHub" style="width: 30px; height: 30px;">
-                        <span class="link-text">GitHub</span>
+                        <img src="Images/github.svg" alt="GitHub" style="width: 25px;"> <span>GitHub</span>
+                    </a>
+                    <a href="https://adriaroger.itch.io/" class="contact-link" target="_blank">
+                        <img src="Images/itchio.svg" alt="Itch.io" style="width: 25px;"> <span>Itch.io</span>
                     </a>
                 </div>
             </div>
-            <p class="contact-note">I typically respond within 24 hours.</p>
         </div>
     </section>
-
-    <footer>
-        <p class="footer-text">© 2025 Adrià Roger Juanola | Game Developer Portfolio</p>
-    </footer>
 
     <div id="project1" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeModal('project1')">&times;</span>
             <h2>Shock Troopers</h2>
-            <div class="project-image" style="margin-bottom: 2rem;">
-                <img src="Images/ShockTroopers.png" alt="Shock Troopers" style="border-radius: 10px; width: 100%;">
-            </div>
-            <p>A game developed for "Project 1" (a 1st year subject) with four classmates. It was very challenging and took us four months.</p>
+            <img src="Images/ShockTroopers.png" style="width:100%; border-radius:10px; margin-bottom:1rem">
+            <p>Developed in C++ using only SDL. Features AI State Machine and Bosses.</p>
             <div class="modal-features">
-                <div class="feature-item">
-                    <div class="feature-title">Development Details</div>
-                    <div class="feature-desc">Developed in C++, using only SDL and no tools nor Game Engines. Features include enemy AI State Machine, PickUps, miniboss and final Boss.</div>
-                </div>
-                <div class="feature-item">
-                    <div class="feature-title">My Contributions</div>
-                    <div class="feature-desc">
-                        <ul>
-                            <li>Enemy movement and rotation</li>
-                            <li>Enemy State Machine</li>
-                            <li>PickUps</li>
-                        </ul>
-                    </div>
-                </div>
+                <div class="feature-item"><div class="feature-title">Details</div><div class="feature-desc">
+                    <ul>
+                        <li>Enemy AI</li>
+                        <li>PickUps</li>
+                        <li>Bosses</li>
+                    </ul>
+                </div></div>
+                <div class="feature-item"><div class="feature-title">My Role</div><div class="feature-desc">
+                    <ul>
+                        <li>Movement</li>
+                        <li>State Machine</li>
+                    </ul>
+                </div></div>
             </div>
-            <div style="text-align: center; margin-top: 2rem;">
-                <a href="https://github.com/Avocado-Dreams/Shock-Troopers.git" class="cta-button" target="_blank"><span>View on GitHub</span></a>
+            <div class="modal-actions">
+                <a href="https://github.com/Avocado-Dreams/Shock-Troopers.git" class="cta-button" target="_blank"><span>GitHub</span></a>
                 <a href="https://avocado-dreams.github.io/" class="cta-button" target="_blank"><span>Website</span></a>
             </div>
         </div>
@@ -233,29 +198,26 @@
         <div class="modal-content">
             <span class="close" onclick="closeModal('project2')">&times;</span>
             <h2>W40K-TLM</h2>
-            <div class="project-image" style="margin-bottom: 2rem;">
-                <img src="Images/LogoW40K.png" alt="W40K-TLM" style="border-radius: 10px; width: 100%;">
-            </div>
-            <p>A game developed in our own engine, 39 students participated and we organized ourselves into Scrum Groups.</p>
+            <img src="Images/LogoW40K.png" style="width:100%; border-radius:10px; margin-bottom:1rem">
+            <p>Warhammer inspired game made in a custom engine with 39 students.</p>
             <div class="modal-features">
-                <div class="feature-item">
-                    <div class="feature-title">Development Details</div>
-                    <div class="feature-desc">Developed in CoffeeEngine in Lua. Features include a full game with miniboss, final boss, 4 enemy types, and special abilities.</div>
-                </div>
-                <div class="feature-item">
-                    <div class="feature-title">My Contributions</div>
-                    <div class="feature-desc">
-                        <ul>
-                            <li>Initial engine support</li>
-                            <li>Engine Documentation support</li>
-                            <li>Enemy type ranged development</li>
-                        </ul>
-                    </div>
-                </div>
+                <div class="feature-item"><div class="feature-title">Details</div><div class="feature-desc">
+                    <ul>
+                        <li>Custom Engine</li>
+                        <li>Lua Scripting</li>
+                    </ul>
+                </div></div>
+                <div class="feature-item"><div class="feature-title">My Role</div><div class="feature-desc">
+                    <ul>
+                        <li>Engine support</li>
+                        <li>Ranged enemies</li>
+                    </ul>
+                </div></div>
             </div>
-            <div style="text-align: center; margin-top: 2rem;">
-                <a href="https://github.com/Burned-Games/W40K-TLM" class="cta-button" target="_blank"><span>View on GitHub</span></a>
+            <div class="modal-actions">
+                <a href="https://github.com/Burned-Games/W40K-TLM" class="cta-button" target="_blank"><span>GitHub</span></a>
                 <a href="https://burned-games.github.io/" class="cta-button" target="_blank"><span>Game Website</span></a>
+                <a href="https://burned-games.github.io/Coffee-Engine/index.html" class="cta-button" target="_blank"><span>Docs</span></a>
             </div>
         </div>
     </div>
@@ -264,23 +226,28 @@
         <div class="modal-content">
             <span class="close" onclick="closeModal('project3')">&times;</span>
             <h2>Odissea a la Carta</h2>
-            <div class="project-image" style="margin-bottom: 2rem;">
-                <img src="Images/Odissea2.png" alt="Odissea a la Carta" style="border-radius: 10px; width: 100%;">
-            </div>
-            <p>A job simulator game created in a week for a GameJam under the theme "Odissey".</p>
+            <img src="Images/Odissea2.png" style="width:100%; border-radius:10px; margin-bottom:1rem">
+            <p>Job simulator for a GameJam.</p>
             <div class="modal-features">
-                <div class="feature-item">
-                    <div class="feature-title">Details</div>
-                    <div class="feature-desc">Developed in Unity/C#. Features more than 20,000 client combinations and a cute helper dog.</div>
-                </div>
-                <div class="feature-item">
-                    <div class="feature-title">My Role</div>
-                    <div class="feature-desc">Gameplay programming, client logic, and random system development.</div>
-                </div>
+                <div class="feature-item"><div class="feature-title">Details</div><div class="feature-desc">
+                    <ul>
+                        <li>Developed in Unity/C#</li>
+                        <li>Procedural client generation</li>
+                        <li>Cute helper dog</li>
+                    </ul>
+                </div></div>
+                <div class="feature-item"><div class="feature-title">My Role</div><div class="feature-desc">
+                    <ul>
+                        <li>Gameplay</li>
+                        <li>Procedural generation</li>
+                        <li>Random systems</li>
+                    </ul>
+                </div></div>
             </div>
-            <div style="text-align: center; margin-top: 2rem;">
-                <a href="https://github.com/Primate-Studio/GameJam2026" class="cta-button" target="_blank"><span>View on GitHub</span></a>
+            <div class="modal-actions">
+                <a href="https://github.com/Primate-Studio/GameJam2026" class="cta-button" target="_blank"><span>GitHub</span></a>
                 <a href="https://rodrigomoize.itch.io/odissea-a-la-carta" class="cta-button" target="_blank"><span>Itch.io</span></a>
+                <a href="https://drive.google.com/file/d/1-0CVbevzUEY1GL3DT5qUkl7sRTyLPf5s/view?usp=sharing" class="cta-button" target="_blank"><span>Trailer</span></a>
             </div>
         </div>
     </div>
@@ -289,26 +256,34 @@
         <div class="modal-content">
             <span class="close" onclick="closeModal('project4')">&times;</span>
             <h2>The Asylum of Creation</h2>
-            <div class="project-image" style="margin-bottom: 2rem;">
-                <img src="Images/AssylumOfCreation.png" alt="The Asylum of Creation" style="border-radius: 10px; width: 100%;">
-            </div>
-            <p>Developed for the 8a Gran CITM Game Jam. You are a test subject of Dr. Darwin trapped in an experimental world.</p>
+            <img src="Images/AssylumOfCreation.png" style="width:100%; border-radius:10px; margin-bottom:1rem">
+            <p>Navigate a twisted world in this GameJam combat game.</p>
             <div class="modal-features">
-                <div class="feature-item">
-                    <div class="feature-title">Highlights</div>
-                    <div class="feature-desc">Features two types of enemies, parries, hidden narrative, and 3 scenario variations.</div>
-                </div>
-                <div class="feature-item">
-                    <div class="feature-title">My Role</div>
-                    <div class="feature-desc">Design, enemies State Machine, gameplay programming, and asset textures.</div>
-                </div>
+                <div class="feature-item"><div class="feature-title">Details</div><div class="feature-desc">
+                    <ul>
+                        <li>Unity/C#</li>
+                        <li>AI State Machine</li>
+                        <li>Procedural levels</li>
+                    </ul>
+                </div></div>
+                <div class="feature-item"><div class="feature-title">My Role</div><div class="feature-desc">
+                    <ul>
+                        <li>Design</li>
+                        <li>AI</li>
+                        <li>Gameplay programming</li>
+                        <li>Textures</li>
+                    </ul>
+                </div></div>
             </div>
-            <div style="text-align: center; margin-top: 2rem;">
+            <div class="modal-actions">
                 <a href="https://github.com/Monkey-Games-Studio/The-Asylum-of-Creation" class="cta-button" target="_blank"><span>GitHub</span></a>
                 <a href="https://paulo-white.itch.io/the-asylum-of-creation" class="cta-button" target="_blank"><span>Itch.io</span></a>
+                <a href="https://youtu.be/mHzj64I8j7s" class="cta-button" target="_blank"><span>Trailer</span></a>
             </div>
         </div>
     </div>
+
+    <footer><p>© 2025 Adrià Roger Juanola | Game Developer Portfolio</p></footer>
     <script src="script.js"></script>
 </body>
 </html>
