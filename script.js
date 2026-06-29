@@ -1,98 +1,41 @@
-// --- 1. MENÚ MÒBIL ---
-const menuBtn = document.getElementById('mobile-menu-btn');
-const navLinks = document.getElementById('nav-links');
+/* ============================================================
+   Adrià Roger Juanola — Portfolio
+   ============================================================ */
 
-menuBtn.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
-    menuBtn.textContent = navLinks.classList.contains('active') ? '✕' : '☰';
-});
+// --- Work index: expand / collapse ---
+const works = document.querySelectorAll('.work');
 
-// Tancar menú en clicar enllaç
-document.querySelectorAll('.nav-links a').forEach(link => {
-    link.addEventListener('click', () => {
-        navLinks.classList.remove('active');
-        menuBtn.textContent = '☰';
+works.forEach(work => {
+    const head = work.querySelector('.work-head');
+    head.addEventListener('click', () => {
+        const isOpen = work.classList.contains('open');
+
+        // Close any other open entry (single-open accordion)
+        works.forEach(other => {
+            if (other !== work) {
+                other.classList.remove('open');
+                other.querySelector('.work-head').setAttribute('aria-expanded', 'false');
+            }
+        });
+
+        work.classList.toggle('open', !isOpen);
+        head.setAttribute('aria-expanded', String(!isOpen));
     });
 });
 
-// --- 2. MODALS ---
-function openModal(id) {
-    const modal = document.getElementById(id);
-    modal.style.display = 'block';
-    document.body.style.overflow = 'hidden';
-}
+// --- Highlight the section currently in view ---
+const navItems = document.querySelectorAll('.nav-item');
+const sections = document.querySelectorAll('.block');
 
-function closeModal(id) {
-    document.getElementById(id).style.display = 'none';
-    document.body.style.overflow = 'auto';
-}
-
-// Tancar en clicar fora del contingut
-window.onclick = (e) => {
-    if (e.target.classList.contains('modal')) {
-        e.target.style.display = 'none';
-        document.body.style.overflow = 'auto';
-    }
-};
-
-// --- 3. ANIMACIONS SECCIONS I SKILLS ---
-const sections = document.querySelectorAll('.section');
-const skillBars = document.querySelectorAll('.skill-progress');
-
-const observer = new IntersectionObserver((entries) => {
+const spy = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-            
-            // Si és la secció de skills, animem les barres
-            if (entry.target.id === 'skills') {
-                skillBars.forEach(bar => {
-                    const pct = bar.parentElement.previousElementSibling.textContent; // no l'utilitzem, usem data-percent
-                    bar.style.width = bar.getAttribute('data-percent');
-                });
-            }
+            const id = entry.target.id;
+            navItems.forEach(item =>
+                item.classList.toggle('current', item.getAttribute('href') === '#' + id)
+            );
         }
     });
-}, { threshold: 0.15 });
+}, { rootMargin: '-40% 0px -55% 0px' });
 
-sections.forEach(s => observer.observe(s));
-
-// --- 4. SISTEMA DE PARTÍCULES ---
-const canvas = document.getElementById('particles');
-const ctx = canvas.getContext('2d');
-let particles = [];
-
-function initParticles() {
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-    particles = [];
-    const count = Math.floor(window.innerWidth / 15);
-    for(let i=0; i<count; i++) {
-        particles.push({
-            x: Math.random() * canvas.width,
-            y: Math.random() * canvas.height,
-            vx: (Math.random() - 0.5) * 0.8,
-            vy: (Math.random() - 0.5) * 0.8,
-            size: Math.random() * 2 + 1
-        });
-    }
-}
-
-function animate() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    particles.forEach(p => {
-        p.x += p.vx; p.y += p.vy;
-        if(p.x < 0 || p.x > canvas.width) p.vx *= -1;
-        if(p.y < 0 || p.y > canvas.height) p.vy *= -1;
-        
-        ctx.fillStyle = 'rgba(0, 212, 255, 0.25)';
-        ctx.beginPath();
-        ctx.arc(p.x, p.y, p.size, 0, Math.PI*2);
-        ctx.fill();
-    });
-    requestAnimationFrame(animate);
-}
-
-window.addEventListener('resize', initParticles);
-initParticles();
-animate();
+sections.forEach(s => spy.observe(s));

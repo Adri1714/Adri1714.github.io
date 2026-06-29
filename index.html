@@ -3,310 +3,223 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adrià Roger Juanola - Game Developer Portfolio</title>
+    <title>Adrià Roger Juanola — Game developer</title>
+    <meta name="description" content="Adrià Roger Juanola, game developer studying at CITM (UPC). Selected work in Unity, C++ and C#.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Pixelify+Sans:wght@400;600&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <canvas id="particles"></canvas>
-    
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="logo">AR</div>
-            <button class="mobile-menu-btn" id="mobile-menu-btn">☰</button>
-            <ul class="nav-links" id="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
+    <div class="layout">
 
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <div class="profile-container">
-                <div class="profile-image">
-                    <img src="Images/AdriRoger.jpg" alt="Adrià Roger Juanola">
+        <aside class="sidebar">
+            <div class="sidebar-top">
+                <div class="identity">
+                    <span class="role-line">Game developer</span>
+                    <h1 class="name">Adrià<br>Roger<br>Juanola</h1>
                 </div>
+                <p class="lede">
+                    A games &amp; design student at CITM (UPC), building gameplay,
+                    systems and small worlds in Unity and C++. Currently looking for
+                    teams to make things with.
+                </p>
             </div>
-            <h1>Adrià Roger Juanola</h1>
-            <p class="subtitle">Game Developer</p>
-            <a href="#projects" class="cta-button"><span>My Projects</span></a>
-        </div>
-    </section>
 
-    <section id="about" class="section">
-    <h2>About Me</h2>
-    <div class="section-divider"></div>
-    <div class="about-content">
-        <div class="about-text">
-            <p>I'm a passionate game developer currently studying Video Game Design and Development at CITM (UPC). My journey began when I was little, playing with simple programming like Scratch, and that awakened my programming passion.</p>
-            <p>I love bringing ideas to life through code, design, and storytelling. My approach combines technical expertise with creative vision to craft memorable player experiences.</p>
-            <p>When I'm not coding, you'll find me playing indie games for inspiration or participating in game jams. I believe games are the ultimate medium for storytelling and connection.</p>
-        </div>
-        <div class="about-highlights">
-            <div class="highlight-card">
-                <div class="highlight-title">
-                    <img src="Images/learn.svg" alt="Learn" class="highlight-icon">
-                    <span>Currently Studying</span>
-                </div>
-                <div class="highlight-desc">Video Game Design and Development at CITM (UPC), focusing on both technical and creative aspects of game development.</div>
-            </div>
-            <div class="highlight-card">
-                <div class="highlight-title">
-                    <img src="Images/games-control.svg" alt="Games" class="highlight-icon">
-                    <span>Game Jams</span>
-                </div>
-                <div class="highlight-desc">Starting to participate in GameJams, pushing myself to create innovative experiences within given limits.</div>
-            </div>
-            <div class="highlight-card">
-                <div class="highlight-title">
-                    <img src="Images/thinking.svg" alt="Solving" class="highlight-icon">
-                    <span>Problem Solver</span>
-                </div>
-                <div class="highlight-desc">I enjoy breaking down problems step by step to find a solution.</div>
-            </div>
-        </div>
-    </div>
-</section>
+            <nav class="local-nav" aria-label="Sections">
+                <a href="#work" class="nav-item">Work</a>
+                <a href="#background" class="nav-item">Background</a>
+                <a href="#toolkit" class="nav-item">Toolkit</a>
+                <a href="#contact" class="nav-item">Contact</a>
+            </nav>
 
-    <section id="projects" class="section">
-        <h2>Featured Projects</h2>
-        <div class="section-divider"></div>
-        <div class="projects-grid">
-            <div class="project-card" onclick="openModal('project1')">
-                <div class="project-image"><img src="Images/ShockTroopers.png" alt="Shock Troopers"></div>
-                <div class="project-info">
-                    <h3 class="project-title">Shock Troopers</h3>
-                    <div class="project-tech"><span class="tech-tag">C++</span><span class="tech-tag">SDL</span></div>
-                </div>
+            <div class="sidebar-bottom">
+                <ul class="links">
+                    <li><a href="mailto:adria.roger.juanola@gmail.com">Email</a></li>
+                    <li><a href="https://github.com/Adri1714" target="_blank" rel="noopener">GitHub</a></li>
+                    <li><a href="https://www.linkedin.com/in/adrià-roger-0b5899196/" target="_blank" rel="noopener">LinkedIn</a></li>
+                    <li><a href="https://adriaroger.itch.io/" target="_blank" rel="noopener">Itch.io</a></li>
+                </ul>
+                <p class="meta-note">Based in Catalonia · Open to collaborations</p>
             </div>
-            <div class="project-card" onclick="openModal('project2')">
-                <div class="project-image"><img src="Images/W40K.png" alt="W40K"></div>
-                <div class="project-info">
-                    <h3 class="project-title">W40K-TLM</h3>
-                    <div class="project-tech"><span class="tech-tag">Lua</span><span class="tech-tag">C</span></div>
-                </div>
-            </div>
-            <div class="project-card" onclick="openModal('project3')">
-                <div class="project-image"><img src="Images/OdisseaCarta.png" alt="Odissea"></div>
-                <div class="project-info">
-                    <h3 class="project-title">Odissea a la Carta</h3>
-                    <div class="project-tech"><span class="tech-tag">Unity</span><span class="tech-tag">C#</span></div>
-                </div>
-            </div>
-            <div class="project-card" onclick="openModal('project4')">
-                <div class="project-image"><img src="Images/AssylumOfCreation.png" alt="Asylum"></div>
-                <div class="project-info">
-                    <h3 class="project-title">The Asylum of Creation</h3>
-                    <div class="project-tech"><span class="tech-tag">Unity</span><span class="tech-tag">C#</span></div>
-                </div>
-            </div>
-        </div>
-    </section>
+        </aside>
 
-    <section id="skills" class="section">
-    <h2>Skills & Tools</h2>
-    <div class="section-divider"></div>
-    <div class="skills-wrapper">
-        <div class="skill-category-box">
-            <h3>Programming</h3>
-            <div class="skills-logos-grid">
-                <div class="skill-logo-item">
-                    <img src="Images/unity (3).svg" alt="Unity">
-                    <span>Unity</span>
-                </div>
-                <div class="skill-logo-item">
-                    <img src="Images/cpp.svg" alt="C++">
-                    <span>C++</span>
-                </div>
-                <div class="skill-logo-item">
-                    <img src="Images/c-sharp.svg" alt="C#">
-                    <span>C#</span>
-                </div>
-            </div>
-        </div>
+        <main class="content">
 
-        <div class="skill-category-box">
-            <h3>Art & Design</h3>
-            <div class="skills-logos-grid">
-                <div class="skill-logo-item">
-                    <img src="Images/Maya.svg" alt="Maya">
-                    <span>Maya</span>
-                </div>
-                <div class="skill-logo-item">
-                    <img src="Images/substance.svg" alt="Substance">
-                    <span>Substance</span>
-                </div>
-                <div class="skill-logo-item">
-                    <img src="Images/blender (1).svg" alt="Blender">
-                    <span>Blender</span>
-                </div>
-            </div>
-        </div>
+            <section id="work" class="block">
+                <header class="block-head">
+                    <h2>Selected work</h2>
+                    <p class="block-count">Four projects</p>
+                </header>
 
-        <div class="skill-category-box">
-            <h3>Production</h3>
-            <div class="skills-logos-grid">
-                <div class="skill-logo-item">
-                    <img src="Images/git.svg" alt="Git">
-                    <span>Git</span>
-                </div>
-                <div class="skill-logo-item">
-                    <img src="Images/trello (1).svg" alt="Trello">
-                    <span>Trello</span>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+                <ol class="work-list">
+                    <li class="work">
+                        <button class="work-head" aria-expanded="false">
+                            <span class="work-index">01</span>
+                            <span class="work-title">Shock Troopers</span>
+                            <span class="work-meta">C++, SDL</span>
+                            <span class="work-toggle" aria-hidden="true"></span>
+                        </button>
+                        <div class="work-body">
+                            <div class="work-body-inner">
+                                <figure class="work-media">
+                                    <img src="Images/ShockTroopers.png" alt="Shock Troopers gameplay">
+                                </figure>
+                                <div class="work-detail">
+                                    <p>A top-down shooter written from scratch in C++ on top of SDL, with an
+                                       AI state machine driving enemies and boss encounters.</p>
+                                    <p class="work-role"><span>Built</span> Enemy AI, pick-ups and bosses. <span>My part</span> player movement and the state machine.</p>
+                                    <p class="work-links">
+                                        <a href="https://github.com/Avocado-Dreams/Shock-Troopers.git" target="_blank" rel="noopener">Source ↗</a>
+                                        <a href="https://avocado-dreams.github.io/" target="_blank" rel="noopener">Team site ↗</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
 
-    <section id="contact" class="section contact-section">
-        <h2>Let's Connect</h2>
-        <div class="section-divider"></div>
-        <div class="contact-content">
-            <p class="contact-intro">Interested in collaborating or have questions? Feel free to reach out!</p>
-            <div class="contact-links">
-                <div class="contact-row">
-                    <a href="mailto:adria.roger.juanola@gmail.com" class="contact-link">
-                        <img src="Images/Gmail.svg" alt="Gmail" style="width: 25px;"> <span>Gmail</span>
-                    </a>
-                    <a href="https://www.linkedin.com/in/adrià-roger-0b5899196/" class="contact-link" target="_blank">
-                        <img src="Images/linkedin.svg" alt="LinkedIn" style="width: 25px;"> <span>LinkedIn</span>
-                    </a>
-                    <a href="https://github.com/Adri1714" class="contact-link" target="_blank">
-                        <img src="Images/github.svg" alt="GitHub" style="width: 25px;"> <span>GitHub</span>
-                    </a>
-                    <a href="https://adriaroger.itch.io/" class="contact-link" target="_blank">
-                        <img src="Images/itchio.svg" alt="Itch.io" style="width: 25px;"> <span>Itch.io</span>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
+                    <li class="work">
+                        <button class="work-head" aria-expanded="false">
+                            <span class="work-index">02</span>
+                            <span class="work-title">W40K — TLM</span>
+                            <span class="work-meta">Lua, C</span>
+                            <span class="work-toggle" aria-hidden="true"></span>
+                        </button>
+                        <div class="work-body">
+                            <div class="work-body-inner">
+                                <figure class="work-media">
+                                    <img src="Images/W40K.png" alt="W40K — TLM">
+                                </figure>
+                                <div class="work-detail">
+                                    <p>A Warhammer-inspired game built on a custom engine alongside 39 other students,
+                                       with gameplay scripted in Lua.</p>
+                                    <p class="work-role"><span>Built</span> engine support and Lua scripting. <span>My part</span> engine support and ranged enemies.</p>
+                                    <p class="work-links">
+                                        <a href="https://github.com/Burned-Games/W40K-TLM" target="_blank" rel="noopener">Source ↗</a>
+                                        <a href="https://burned-games.github.io/" target="_blank" rel="noopener">Game site ↗</a>
+                                        <a href="https://burned-games.github.io/Coffee-Engine/index.html" target="_blank" rel="noopener">Engine docs ↗</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
 
-    <div id="project1" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal('project1')">&times;</span>
-            <h2>Shock Troopers</h2>
-            <img src="Images/ShockTroopers.png" style="width:100%; border-radius:10px; margin-bottom:1rem">
-            <p>Developed in C++ using only SDL. Features AI State Machine and Bosses.</p>
-            <div class="modal-features">
-                <div class="feature-item"><div class="feature-title">Details</div><div class="feature-desc">
-                    <ul>
-                        <li>Enemy AI</li>
-                        <li>PickUps</li>
-                        <li>Bosses</li>
+                    <li class="work">
+                        <button class="work-head" aria-expanded="false">
+                            <span class="work-index">03</span>
+                            <span class="work-title">Odissea a la Carta</span>
+                            <span class="work-meta">Unity, C#</span>
+                            <span class="work-toggle" aria-hidden="true"></span>
+                        </button>
+                        <div class="work-body">
+                            <div class="work-body-inner">
+                                <figure class="work-media">
+                                    <img src="Images/Odissea2.png" alt="Odissea a la Carta">
+                                </figure>
+                                <div class="work-detail">
+                                    <p>A cozy job-simulator made for a game jam in Unity, with procedurally generated
+                                       clients to serve (and a helper dog).</p>
+                                    <p class="work-role"><span>Built</span> procedural client generation and random systems. <span>My part</span> gameplay and procedural generation.</p>
+                                    <p class="work-links">
+                                        <a href="https://github.com/Primate-Studio/GameJam2026" target="_blank" rel="noopener">Source ↗</a>
+                                        <a href="https://rodrigomoize.itch.io/odissea-a-la-carta" target="_blank" rel="noopener">Play ↗</a>
+                                        <a href="https://drive.google.com/file/d/1-0CVbevzUEY1GL3DT5qUkl7sRTyLPf5s/view?usp=sharing" target="_blank" rel="noopener">Trailer ↗</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="work">
+                        <button class="work-head" aria-expanded="false">
+                            <span class="work-index">04</span>
+                            <span class="work-title">The Asylum of Creation</span>
+                            <span class="work-meta">Unity, C#</span>
+                            <span class="work-toggle" aria-hidden="true"></span>
+                        </button>
+                        <div class="work-body">
+                            <div class="work-body-inner">
+                                <figure class="work-media">
+                                    <img src="Images/AssylumOfCreation.png" alt="The Asylum of Creation">
+                                </figure>
+                                <div class="work-detail">
+                                    <p>A game-jam combat game set in a twisted, procedurally built world, with enemies
+                                       driven by an AI state machine.</p>
+                                    <p class="work-role"><span>Built</span> AI, procedural levels and textures. <span>My part</span> design, AI and gameplay programming.</p>
+                                    <p class="work-links">
+                                        <a href="https://github.com/Monkey-Games-Studio/The-Asylum-of-Creation" target="_blank" rel="noopener">Source ↗</a>
+                                        <a href="https://paulo-white.itch.io/the-asylum-of-creation" target="_blank" rel="noopener">Play ↗</a>
+                                        <a href="https://youtu.be/mHzj64I8j7s" target="_blank" rel="noopener">Trailer ↗</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ol>
+            </section>
+
+            <section id="background" class="block">
+                <header class="block-head">
+                    <h2>Background</h2>
+                </header>
+                <div class="prose">
+                    <p>I started programming as a kid with Scratch, and the habit of taking an idea
+                       and turning it into something playable never left. Today I study Video Game
+                       Design and Development at CITM (UPC), where I split my time between the
+                       technical and creative sides of making games.</p>
+                    <p>Most of what I enjoy lives at the intersection of the two: figuring out how a
+                       system should behave, then making it feel good to play. I like breaking
+                       problems down step by step until they click, and game jams are where I push
+                       hardest — short deadlines, tight constraints, a finished thing at the end.</p>
+                    <p>When I'm not building, I'm usually playing indie games and taking notes on what
+                       makes them work.</p>
+                </div>
+            </section>
+
+            <section id="toolkit" class="block">
+                <header class="block-head">
+                    <h2>Toolkit</h2>
+                </header>
+                <dl class="toolkit">
+                    <div class="toolkit-row">
+                        <dt>Programming</dt>
+                        <dd>Unity · C++ · C#</dd>
+                    </div>
+                    <div class="toolkit-row">
+                        <dt>Art &amp; Design</dt>
+                        <dd>Maya · Substance · Blender</dd>
+                    </div>
+                    <div class="toolkit-row">
+                        <dt>Production</dt>
+                        <dd>Git · Trello</dd>
+                    </div>
+                </dl>
+            </section>
+
+            <section id="contact" class="block">
+                <header class="block-head">
+                    <h2>Contact</h2>
+                </header>
+                <div class="contact-block">
+                    <p class="contact-pitch">Got a project, a team, or just want to talk games?
+                       The fastest way to reach me is email.</p>
+                    <a class="contact-mail" href="mailto:adria.roger.juanola@gmail.com">adria.roger.juanola@gmail.com</a>
+                    <ul class="contact-elsewhere">
+                        <li><a href="https://github.com/Adri1714" target="_blank" rel="noopener">GitHub</a></li>
+                        <li><a href="https://www.linkedin.com/in/adrià-roger-0b5899196/" target="_blank" rel="noopener">LinkedIn</a></li>
+                        <li><a href="https://adriaroger.itch.io/" target="_blank" rel="noopener">Itch.io</a></li>
                     </ul>
-                </div></div>
-                <div class="feature-item"><div class="feature-title">My Role</div><div class="feature-desc">
-                    <ul>
-                        <li>Movement</li>
-                        <li>State Machine</li>
-                    </ul>
-                </div></div>
-            </div>
-            <div class="modal-actions">
-                <a href="https://github.com/Avocado-Dreams/Shock-Troopers.git" class="cta-button" target="_blank"><span>GitHub</span></a>
-                <a href="https://avocado-dreams.github.io/" class="cta-button" target="_blank"><span>Website</span></a>
-            </div>
-        </div>
-    </div>
+                </div>
+            </section>
 
-    <div id="project2" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal('project2')">&times;</span>
-            <h2>W40K-TLM</h2>
-            <img src="Images/LogoW40K.png" style="width:100%; border-radius:10px; margin-bottom:1rem">
-            <p>Warhammer inspired game made in a custom engine with 39 students.</p>
-            <div class="modal-features">
-                <div class="feature-item"><div class="feature-title">Details</div><div class="feature-desc">
-                    <ul>
-                        <li>Custom Engine</li>
-                        <li>Lua Scripting</li>
-                    </ul>
-                </div></div>
-                <div class="feature-item"><div class="feature-title">My Role</div><div class="feature-desc">
-                    <ul>
-                        <li>Engine support</li>
-                        <li>Ranged enemies</li>
-                    </ul>
-                </div></div>
-            </div>
-            <div class="modal-actions">
-                <a href="https://github.com/Burned-Games/W40K-TLM" class="cta-button" target="_blank"><span>GitHub</span></a>
-                <a href="https://burned-games.github.io/" class="cta-button" target="_blank"><span>Game Website</span></a>
-                <a href="https://burned-games.github.io/Coffee-Engine/index.html" class="cta-button" target="_blank"><span>Docs</span></a>
-            </div>
-        </div>
+            <footer class="content-footer">
+                <span>Adrià Roger Juanola</span>
+                <span>© 2025</span>
+            </footer>
+
+        </main>
     </div>
 
-    <div id="project3" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal('project3')">&times;</span>
-            <h2>Odissea a la Carta</h2>
-            <img src="Images/Odissea2.png" style="width:100%; border-radius:10px; margin-bottom:1rem">
-            <p>Job simulator for a GameJam.</p>
-            <div class="modal-features">
-                <div class="feature-item"><div class="feature-title">Details</div><div class="feature-desc">
-                    <ul>
-                        <li>Developed in Unity/C#</li>
-                        <li>Procedural client generation</li>
-                        <li>Cute helper dog</li>
-                    </ul>
-                </div></div>
-                <div class="feature-item"><div class="feature-title">My Role</div><div class="feature-desc">
-                    <ul>
-                        <li>Gameplay</li>
-                        <li>Procedural generation</li>
-                        <li>Random systems</li>
-                    </ul>
-                </div></div>
-            </div>
-            <div class="modal-actions">
-                <a href="https://github.com/Primate-Studio/GameJam2026" class="cta-button" target="_blank"><span>GitHub</span></a>
-                <a href="https://rodrigomoize.itch.io/odissea-a-la-carta" class="cta-button" target="_blank"><span>Itch.io</span></a>
-                <a href="https://drive.google.com/file/d/1-0CVbevzUEY1GL3DT5qUkl7sRTyLPf5s/view?usp=sharing" class="cta-button" target="_blank"><span>Trailer</span></a>
-            </div>
-        </div>
-    </div>
-
-    <div id="project4" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal('project4')">&times;</span>
-            <h2>The Asylum of Creation</h2>
-            <img src="Images/AssylumOfCreation.png" style="width:100%; border-radius:10px; margin-bottom:1rem">
-            <p>Navigate a twisted world in this GameJam combat game.</p>
-            <div class="modal-features">
-                <div class="feature-item"><div class="feature-title">Details</div><div class="feature-desc">
-                    <ul>
-                        <li>Unity/C#</li>
-                        <li>AI State Machine</li>
-                        <li>Procedural levels</li>
-                    </ul>
-                </div></div>
-                <div class="feature-item"><div class="feature-title">My Role</div><div class="feature-desc">
-                    <ul>
-                        <li>Design</li>
-                        <li>AI</li>
-                        <li>Gameplay programming</li>
-                        <li>Textures</li>
-                    </ul>
-                </div></div>
-            </div>
-            <div class="modal-actions">
-                <a href="https://github.com/Monkey-Games-Studio/The-Asylum-of-Creation" class="cta-button" target="_blank"><span>GitHub</span></a>
-                <a href="https://paulo-white.itch.io/the-asylum-of-creation" class="cta-button" target="_blank"><span>Itch.io</span></a>
-                <a href="https://youtu.be/mHzj64I8j7s" class="cta-button" target="_blank"><span>Trailer</span></a>
-            </div>
-        </div>
-    </div>
-
-    <footer><p>© 2025 Adrià Roger Juanola | Game Developer Portfolio</p></footer>
     <script src="script.js"></script>
 </body>
 </html>
