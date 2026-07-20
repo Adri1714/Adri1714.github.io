@@ -1,8 +1,5 @@
-/* ============================================================
-   Adrià Roger Juanola — Portfolio
-   ============================================================ */
 
-// --- Work: index + viewer ---
+
 const tabs = [...document.querySelectorAll('.wx')];
 const panels = [...document.querySelectorAll('.panel')];
 
@@ -21,7 +18,6 @@ tabs.forEach(t => {
     });
 });
 
-// --- Active section in rail nav ---
 const navLinks = [...document.querySelectorAll('.rail-link')];
 const sections = navLinks
     .map(a => document.querySelector(a.getAttribute('href')))

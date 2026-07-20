@@ -1,16 +1,11 @@
-/* ============================================================
-   Adrià Roger Juanola — Portfolio
-   "Arcade velvet" — oxblood rail + cinematic viewer
-   ============================================================ */
-
 :root {
-    --bg:      oklch(0.255 0.072 22);   /* deep oxblood */
-    --bg-2:    oklch(0.30 0.078 22);    /* raised */
+    --bg:      oklch(0.255 0.072 22);   
+    --bg-2:    oklch(0.30 0.078 22);   
     --bg-3:    oklch(0.35 0.082 24);
-    --fg:      oklch(0.94 0.018 78);     /* warm bone */
+    --fg:      oklch(0.94 0.018 78);    
     --fg-dim:  oklch(0.82 0.03 60);
     --fg-mute: oklch(0.70 0.035 50);
-    --accent:  oklch(0.87 0.155 92);     /* warm gold */
+    --accent:  oklch(0.87 0.155 92);     
     --accent-ink: oklch(0.26 0.06 40);
     --line:    color-mix(in oklab, var(--fg) 16%, transparent);
     --line-2:  color-mix(in oklab, var(--fg) 9%, transparent);
