@@ -4,217 +4,182 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adrià Roger Juanola — Game developer</title>
-    <meta name="description" content="Adrià Roger Juanola, game developer studying at CITM (UPC). Selected work in Unity, C++ and C#.">
+    <meta name="description" content="Adrià Roger Juanola — game developer studying at CITM (UPC). Shipped games in Unity, C++ and C#.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Familjen+Grotesk:wght@400;500;600;700&family=Martian+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="layout">
 
-        <aside class="sidebar">
-            <div class="sidebar-top">
-                <div class="identity">
-                    <span class="role-line">Game developer</span>
-                    <h1 class="name">Adrià<br>Roger<br>Juanola</h1>
-                </div>
-                <p class="lede">
-                    A games &amp; design student at CITM (UPC), building gameplay,
-                    systems and small worlds in Unity and C++. Currently looking for
-                    teams to make things with.
-                </p>
+    <div class="shell">
+
+        <!-- IDENTITY RAIL -->
+        <aside class="rail" id="rail">
+            <div class="rail-top">
+                <p class="role">Game developer · CITM (UPC)</p>
+                <h1 class="name">Adrià Roger Juanola</h1>
+                <p class="intro">I build gameplay and systems in Unity and C++, and I care about how they feel
+                    to play. Here's what I've shipped so far.</p>
             </div>
 
-            <nav class="local-nav" aria-label="Sections">
-                <a href="#work" class="nav-item">Work</a>
-                <a href="#background" class="nav-item">Background</a>
-                <a href="#toolkit" class="nav-item">Toolkit</a>
-                <a href="#contact" class="nav-item">Contact</a>
+            <nav class="rail-nav" aria-label="Sections">
+                <a href="#work" class="rail-link">Work</a>
+                <a href="#about" class="rail-link">About</a>
+                <a href="#toolkit" class="rail-link">Toolkit</a>
             </nav>
 
-            <div class="sidebar-bottom">
-                <ul class="links">
-                    <li><a href="mailto:adria.roger.juanola@gmail.com">Email</a></li>
+            <div class="rail-bottom">
+                <a href="mailto:adria.roger.juanola@gmail.com" class="email-cta">
+                    <span>Email me</span><span aria-hidden="true">↗</span>
+                </a>
+                <ul class="socials">
                     <li><a href="https://github.com/Adri1714" target="_blank" rel="noopener">GitHub</a></li>
                     <li><a href="https://www.linkedin.com/in/adrià-roger-0b5899196/" target="_blank" rel="noopener">LinkedIn</a></li>
-                    <li><a href="https://adriaroger.itch.io/" target="_blank" rel="noopener">Itch.io</a></li>
+                    <li><a href="https://adriaroger.itch.io/" target="_blank" rel="noopener">itch.io</a></li>
                 </ul>
-                <p class="meta-note">Based in Catalonia · Open to collaborations</p>
+                <p class="avail">Open to internships &amp; collaborations · Catalonia</p>
             </div>
         </aside>
 
+        <!-- CONTENT -->
         <main class="content">
 
-            <section id="work" class="block">
-                <header class="block-head">
-                    <h2>Selected work</h2>
-                    <p class="block-count">Four projects</p>
-                </header>
+            <section class="work" id="work">
+                <div class="work-head">
+                    <h2 class="section-title">Selected work</h2>
+                    <p class="section-sub">Four shipped projects — game jams, a 40-person team, and one built
+                        from scratch. Pick one.</p>
+                </div>
 
-                <ol class="work-list">
-                    <li class="work">
-                        <button class="work-head" aria-expanded="false">
-                            <span class="work-index">01</span>
-                            <span class="work-title">Shock Troopers</span>
-                            <span class="work-meta">C++, SDL</span>
-                            <span class="work-toggle" aria-hidden="true"></span>
-                        </button>
-                        <div class="work-body">
-                            <div class="work-body-inner">
-                                <figure class="work-media">
-                                    <img src="Images/ShockTroopers.png" alt="Shock Troopers gameplay">
-                                </figure>
-                                <div class="work-detail">
-                                    <p>A top-down shooter written from scratch in C++ on top of SDL, with an
-                                       AI state machine driving enemies and boss encounters.</p>
-                                    <p class="work-role"><span>Built</span> Enemy AI, pick-ups and bosses. <span>My part</span> player movement and the state machine.</p>
-                                    <p class="work-links">
-                                        <a href="https://github.com/Avocado-Dreams/Shock-Troopers.git" target="_blank" rel="noopener">Source ↗</a>
-                                        <a href="https://avocado-dreams.github.io/" target="_blank" rel="noopener">Team site ↗</a>
-                                    </p>
-                                </div>
+                <div class="work-body">
+                    <ol class="work-index" role="tablist" aria-label="Projects">
+                        <li>
+                            <button class="wx active" role="tab" aria-selected="true" data-target="p1">
+                                <span class="wx-num">01</span>
+                                <span class="wx-name">Shock Troopers</span>
+                                <span class="wx-stack">C++ / SDL</span>
+                            </button>
+                        </li>
+                        <li>
+                            <button class="wx" role="tab" aria-selected="false" data-target="p2">
+                                <span class="wx-num">02</span>
+                                <span class="wx-name">W40K — TLM</span>
+                                <span class="wx-stack">Lua / C / Custom engine</span>
+                            </button>
+                        </li>
+                        <li>
+                            <button class="wx" role="tab" aria-selected="false" data-target="p3">
+                                <span class="wx-num">03</span>
+                                <span class="wx-name">Odissea a la Carta</span>
+                                <span class="wx-stack">Unity / C#</span>
+                            </button>
+                        </li>
+                        <li>
+                            <button class="wx" role="tab" aria-selected="false" data-target="p4">
+                                <span class="wx-num">04</span>
+                                <span class="wx-name">The Asylum of Creation</span>
+                                <span class="wx-stack">Unity / C#</span>
+                            </button>
+                        </li>
+                    </ol>
+
+                    <div class="work-stage">
+                        <article class="panel active" id="p1">
+                            <figure class="panel-shot">
+                                <img src="Images/ShockTroopers.png" alt="Shock Troopers — top-down shooter gameplay" class="is-pixel" width="1200" height="750" fetchpriority="high" decoding="async">
+                            </figure>
+                            <div class="panel-meta">
+                                <h3 class="panel-title">Shock Troopers</h3>
+                                <p class="panel-stack">C++ / SDL</p>
+                                <p class="panel-desc">A top-down shooter written from scratch on SDL. Enemies run on an
+                                    AI state machine, with pick-ups and boss fights. I owned player movement and the state machine.</p>
+                                <p class="panel-links">
+                                    <a href="https://github.com/Avocado-Dreams/Shock-Troopers.git" target="_blank" rel="noopener">Source <span aria-hidden="true">↗</span></a>
+                                    <a href="https://avocado-dreams.github.io/" target="_blank" rel="noopener">Team site <span aria-hidden="true">↗</span></a>
+                                </p>
                             </div>
-                        </div>
-                    </li>
+                        </article>
 
-                    <li class="work">
-                        <button class="work-head" aria-expanded="false">
-                            <span class="work-index">02</span>
-                            <span class="work-title">W40K — TLM</span>
-                            <span class="work-meta">Lua, C</span>
-                            <span class="work-toggle" aria-hidden="true"></span>
-                        </button>
-                        <div class="work-body">
-                            <div class="work-body-inner">
-                                <figure class="work-media">
-                                    <img src="Images/W40K.png" alt="W40K — TLM">
-                                </figure>
-                                <div class="work-detail">
-                                    <p>A Warhammer-inspired game built on a custom engine alongside 39 other students,
-                                       with gameplay scripted in Lua.</p>
-                                    <p class="work-role"><span>Built</span> engine support and Lua scripting. <span>My part</span> engine support and ranged enemies.</p>
-                                    <p class="work-links">
-                                        <a href="https://github.com/Burned-Games/W40K-TLM" target="_blank" rel="noopener">Source ↗</a>
-                                        <a href="https://burned-games.github.io/" target="_blank" rel="noopener">Game site ↗</a>
-                                        <a href="https://burned-games.github.io/Coffee-Engine/index.html" target="_blank" rel="noopener">Engine docs ↗</a>
-                                    </p>
-                                </div>
+                        <article class="panel" id="p2">
+                            <figure class="panel-shot">
+                                <img src="Images/W40K.png" alt="W40K — TLM, a Warhammer-inspired game on a custom engine" width="1200" height="750" decoding="async">
+                            </figure>
+                            <div class="panel-meta">
+                                <h3 class="panel-title">W40K — TLM</h3>
+                                <p class="panel-stack">Lua / C / Custom engine</p>
+                                <p class="panel-desc">A Warhammer-inspired game built on a custom engine alongside 39 other
+                                    students, with gameplay scripted in Lua. I worked on engine support and ranged enemies.</p>
+                                <p class="panel-links">
+                                    <a href="https://github.com/Burned-Games/W40K-TLM" target="_blank" rel="noopener">Source <span aria-hidden="true">↗</span></a>
+                                    <a href="https://burned-games.github.io/" target="_blank" rel="noopener">Game site <span aria-hidden="true">↗</span></a>
+                                    <a href="https://burned-games.github.io/Coffee-Engine/index.html" target="_blank" rel="noopener">Engine docs <span aria-hidden="true">↗</span></a>
+                                </p>
                             </div>
-                        </div>
-                    </li>
+                        </article>
 
-                    <li class="work">
-                        <button class="work-head" aria-expanded="false">
-                            <span class="work-index">03</span>
-                            <span class="work-title">Odissea a la Carta</span>
-                            <span class="work-meta">Unity, C#</span>
-                            <span class="work-toggle" aria-hidden="true"></span>
-                        </button>
-                        <div class="work-body">
-                            <div class="work-body-inner">
-                                <figure class="work-media">
-                                    <img src="Images/Odissea2.png" alt="Odissea a la Carta">
-                                </figure>
-                                <div class="work-detail">
-                                    <p>A cozy job-simulator made for a game jam in Unity, with procedurally generated
-                                       clients to serve (and a helper dog).</p>
-                                    <p class="work-role"><span>Built</span> procedural client generation and random systems. <span>My part</span> gameplay and procedural generation.</p>
-                                    <p class="work-links">
-                                        <a href="https://github.com/Primate-Studio/GameJam2026" target="_blank" rel="noopener">Source ↗</a>
-                                        <a href="https://rodrigomoize.itch.io/odissea-a-la-carta" target="_blank" rel="noopener">Play ↗</a>
-                                        <a href="https://drive.google.com/file/d/1-0CVbevzUEY1GL3DT5qUkl7sRTyLPf5s/view?usp=sharing" target="_blank" rel="noopener">Trailer ↗</a>
-                                    </p>
-                                </div>
+                        <article class="panel" id="p3">
+                            <figure class="panel-shot">
+                                <img src="Images/Odissea2.png" alt="Odissea a la Carta — a cozy job-simulator made for a game jam" width="1200" height="750" decoding="async">
+                            </figure>
+                            <div class="panel-meta">
+                                <h3 class="panel-title">Odissea a la Carta</h3>
+                                <p class="panel-stack">Unity / C#</p>
+                                <p class="panel-desc">A cozy job-simulator made for a game jam, with procedurally generated
+                                    clients to serve and a helper dog. I built the gameplay and the procedural systems.</p>
+                                <p class="panel-links">
+                                    <a href="https://github.com/Primate-Studio/GameJam2026" target="_blank" rel="noopener">Source <span aria-hidden="true">↗</span></a>
+                                    <a href="https://rodrigomoize.itch.io/odissea-a-la-carta" target="_blank" rel="noopener">Play <span aria-hidden="true">↗</span></a>
+                                    <a href="https://drive.google.com/file/d/1-0CVbevzUEY1GL3DT5qUkl7sRTyLPf5s/view?usp=sharing" target="_blank" rel="noopener">Trailer <span aria-hidden="true">↗</span></a>
+                                </p>
                             </div>
-                        </div>
-                    </li>
+                        </article>
 
-                    <li class="work">
-                        <button class="work-head" aria-expanded="false">
-                            <span class="work-index">04</span>
-                            <span class="work-title">The Asylum of Creation</span>
-                            <span class="work-meta">Unity, C#</span>
-                            <span class="work-toggle" aria-hidden="true"></span>
-                        </button>
-                        <div class="work-body">
-                            <div class="work-body-inner">
-                                <figure class="work-media">
-                                    <img src="Images/AssylumOfCreation.png" alt="The Asylum of Creation">
-                                </figure>
-                                <div class="work-detail">
-                                    <p>A game-jam combat game set in a twisted, procedurally built world, with enemies
-                                       driven by an AI state machine.</p>
-                                    <p class="work-role"><span>Built</span> AI, procedural levels and textures. <span>My part</span> design, AI and gameplay programming.</p>
-                                    <p class="work-links">
-                                        <a href="https://github.com/Monkey-Games-Studio/The-Asylum-of-Creation" target="_blank" rel="noopener">Source ↗</a>
-                                        <a href="https://paulo-white.itch.io/the-asylum-of-creation" target="_blank" rel="noopener">Play ↗</a>
-                                        <a href="https://youtu.be/mHzj64I8j7s" target="_blank" rel="noopener">Trailer ↗</a>
-                                    </p>
-                                </div>
+                        <article class="panel" id="p4">
+                            <figure class="panel-shot">
+                                <img src="Images/AssylumOfCreation.png" alt="The Asylum of Creation — a combat game in a procedurally built world" width="1200" height="750" decoding="async">
+                            </figure>
+                            <div class="panel-meta">
+                                <h3 class="panel-title">The Asylum of Creation</h3>
+                                <p class="panel-stack">Unity / C#</p>
+                                <p class="panel-desc">A combat game set in a twisted, procedurally built world, with enemies
+                                    driven by an AI state machine. I led design, AI and gameplay programming.</p>
+                                <p class="panel-links">
+                                    <a href="https://github.com/Monkey-Games-Studio/The-Asylum-of-Creation" target="_blank" rel="noopener">Source <span aria-hidden="true">↗</span></a>
+                                    <a href="https://paulo-white.itch.io/the-asylum-of-creation" target="_blank" rel="noopener">Play <span aria-hidden="true">↗</span></a>
+                                    <a href="https://youtu.be/mHzj64I8j7s" target="_blank" rel="noopener">Trailer <span aria-hidden="true">↗</span></a>
+                                </p>
                             </div>
-                        </div>
-                    </li>
-                </ol>
-            </section>
-
-            <section id="background" class="block">
-                <header class="block-head">
-                    <h2>Background</h2>
-                </header>
-                <div class="prose">
-                    <p>I started programming as a kid with Scratch, and the habit of taking an idea
-                       and turning it into something playable never left. Today I study Video Game
-                       Design and Development at CITM (UPC), where I split my time between the
-                       technical and creative sides of making games.</p>
-                    <p>Most of what I enjoy lives at the intersection of the two: figuring out how a
-                       system should behave, then making it feel good to play. I like breaking
-                       problems down step by step until they click, and game jams are where I push
-                       hardest — short deadlines, tight constraints, a finished thing at the end.</p>
-                    <p>When I'm not building, I'm usually playing indie games and taking notes on what
-                       makes them work.</p>
+                        </article>
+                    </div>
                 </div>
             </section>
 
-            <section id="toolkit" class="block">
-                <header class="block-head">
-                    <h2>Toolkit</h2>
-                </header>
-                <dl class="toolkit">
-                    <div class="toolkit-row">
-                        <dt>Programming</dt>
-                        <dd>Unity · C++ · C#</dd>
-                    </div>
-                    <div class="toolkit-row">
-                        <dt>Art &amp; Design</dt>
-                        <dd>Maya · Substance · Blender</dd>
-                    </div>
-                    <div class="toolkit-row">
-                        <dt>Production</dt>
-                        <dd>Git · Trello</dd>
-                    </div>
+            <section class="about" id="about">
+                <h2 class="section-title">About</h2>
+                <p class="about-lead">I started with Scratch as a kid and never lost the habit of turning an idea
+                    into something playable.</p>
+                <div class="about-cols">
+                    <p>Now I study Video Game Design and Development at CITM (UPC), working across the technical and
+                        creative sides of making games.</p>
+                    <p>What I enjoy lives between the two — deciding how a system should behave, then making it feel
+                        good to play. Game jams are where I push hardest: tight deadlines, real constraints, a
+                        finished thing at the end.</p>
+                </div>
+            </section>
+
+            <section class="toolkit" id="toolkit">
+                <h2 class="section-title">Toolkit</h2>
+                <dl class="tk">
+                    <div class="tk-row"><dt>Programming</dt><dd>Unity · C++ · C#</dd></div>
+                    <div class="tk-row"><dt>Art &amp; Design</dt><dd>Maya · Substance · Blender</dd></div>
+                    <div class="tk-row"><dt>Production</dt><dd>Git · Trello</dd></div>
                 </dl>
             </section>
 
-            <section id="contact" class="block">
-                <header class="block-head">
-                    <h2>Contact</h2>
-                </header>
-                <div class="contact-block">
-                    <p class="contact-pitch">Got a project, a team, or just want to talk games?
-                       The fastest way to reach me is email.</p>
-                    <a class="contact-mail" href="mailto:adria.roger.juanola@gmail.com">adria.roger.juanola@gmail.com</a>
-                    <ul class="contact-elsewhere">
-                        <li><a href="https://github.com/Adri1714" target="_blank" rel="noopener">GitHub</a></li>
-                        <li><a href="https://www.linkedin.com/in/adrià-roger-0b5899196/" target="_blank" rel="noopener">LinkedIn</a></li>
-                        <li><a href="https://adriaroger.itch.io/" target="_blank" rel="noopener">Itch.io</a></li>
-                    </ul>
-                </div>
-            </section>
-
-            <footer class="content-footer">
-                <span>Adrià Roger Juanola</span>
-                <span>© 2025</span>
+            <footer class="foot">
+                <span>© 2025 Adrià Roger Juanola</span>
+                <a href="mailto:adria.roger.juanola@gmail.com">adria.roger.juanola@gmail.com</a>
             </footer>
 
         </main>

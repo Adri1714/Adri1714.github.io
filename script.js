@@ -2,39 +2,36 @@
    Adrià Roger Juanola — Portfolio
    ============================================================ */
 
-// --- Work index: expand / collapse ---
-const works = document.querySelectorAll('.work');
+// --- Work: index + viewer ---
+const tabs = [...document.querySelectorAll('.wx')];
+const panels = [...document.querySelectorAll('.panel')];
 
-works.forEach(work => {
-    const head = work.querySelector('.work-head');
-    head.addEventListener('click', () => {
-        const isOpen = work.classList.contains('open');
-
-        // Close any other open entry (single-open accordion)
-        works.forEach(other => {
-            if (other !== work) {
-                other.classList.remove('open');
-                other.querySelector('.work-head').setAttribute('aria-expanded', 'false');
-            }
-        });
-
-        work.classList.toggle('open', !isOpen);
-        head.setAttribute('aria-expanded', String(!isOpen));
+function select(id) {
+    tabs.forEach(t => {
+        const on = t.dataset.target === id;
+        t.classList.toggle('active', on);
+        t.setAttribute('aria-selected', String(on));
+    });
+    panels.forEach(p => p.classList.toggle('active', p.id === id));
+}
+tabs.forEach(t => {
+    t.addEventListener('click', () => select(t.dataset.target));
+    t.addEventListener('mouseenter', () => {
+        if (window.matchMedia('(min-width: 901px)').matches) select(t.dataset.target);
     });
 });
 
-// --- Highlight the section currently in view ---
-const navItems = document.querySelectorAll('.nav-item');
-const sections = document.querySelectorAll('.block');
+// --- Active section in rail nav ---
+const navLinks = [...document.querySelectorAll('.rail-link')];
+const sections = navLinks
+    .map(a => document.querySelector(a.getAttribute('href')))
+    .filter(Boolean);
 
 const spy = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            const id = entry.target.id;
-            navItems.forEach(item =>
-                item.classList.toggle('current', item.getAttribute('href') === '#' + id)
-            );
-        }
+        if (!entry.isIntersecting) return;
+        const id = '#' + entry.target.id;
+        navLinks.forEach(a => a.classList.toggle('current', a.getAttribute('href') === id));
     });
 }, { rootMargin: '-40% 0px -55% 0px' });
 
