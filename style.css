@@ -168,6 +168,69 @@ p { text-wrap: pretty; }
 /* ---------- WORK ---------- */
 .work { padding-top: clamp(3rem, 6vw, 4rem); }
 .work-head { margin-bottom: clamp(2rem, 4vw, 3rem); }
+
+/* featured (TFG) */
+.featured {
+    margin-bottom: clamp(2.5rem, 5vw, 4rem);
+    display: grid;
+    grid-template-columns: 1.25fr 1fr;
+    gap: clamp(1.6rem, 3vw, 2.8rem);
+    align-items: center;
+}
+.featured-shot {
+    position: relative;
+    margin: 0;
+    border-radius: var(--r);
+    overflow: hidden;
+    aspect-ratio: 16 / 9;
+    background: var(--bg-2);
+    box-shadow: var(--shadow);
+}
+.featured-shot img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.featured-badge {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    color: var(--accent-ink);
+    background: var(--accent);
+    padding: 0.4rem 0.85rem;
+    border-radius: 999px;
+    box-shadow: 0 8px 20px -8px oklch(0 0 0 / 0.6);
+}
+.featured-title {
+    font-family: var(--display);
+    font-weight: 400;
+    font-size: clamp(2.1rem, 4.6vw, 3.4rem);
+    text-transform: uppercase;
+    letter-spacing: 0.01em;
+    line-height: 0.96;
+}
+.featured-desc {
+    margin-top: 1.1rem;
+    max-width: 62ch;
+    color: var(--fg-dim);
+    font-size: 1.08rem;
+}
+.featured-role {
+    margin-top: 0.8rem;
+    font-family: var(--mono);
+    font-size: 0.8rem;
+    color: var(--fg-mute);
+}
+.more-head {
+    margin-top: clamp(2.5rem, 5vw, 3.8rem);
+    padding-top: 1.4rem;
+    border-top: 1px solid var(--line-2);
+    margin-bottom: 1.6rem;
+}
+.more-title {
+    font-family: var(--body);
+    font-weight: 600;
+    font-size: 1rem;
+    color: var(--fg-dim);
+}
 .work-body {
     display: grid;
     grid-template-columns: minmax(190px, 0.8fr) 1.4fr;
@@ -362,6 +425,8 @@ p { text-wrap: pretty; }
     .rail-link:hover, .rail-link.current { padding-left: 0; }
     .rail-link::before { display: none; }
     .content { padding-top: clamp(2rem, 6vw, 3rem); }
+
+    .featured { grid-template-columns: 1fr; gap: 1.4rem; }
 
     /* mobile: show all projects stacked, drop the master-detail */
     .work-body { grid-template-columns: 1fr; gap: 2rem; }
